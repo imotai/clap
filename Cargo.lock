@@ -101,9 +101,9 @@ dependencies = [
 
 [[package]]
 name = "anstyle"
-version = "1.0.7"
+version = "1.0.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "038dfcf04a5feb68e9c60b21c9625a54c2c0616e79b72b0fd87075a056ae1d1b"
+checksum = "1bec1de6f59aedf83baf9ff929c98f2ad654b97c9510f4e70cf6f661d49fd5b1"
 
 [[package]]
 name = "anstyle-parse"
@@ -410,10 +410,11 @@ dependencies = [
 
 [[package]]
 name = "clap"
-version = "4.5.13"
+version = "4.5.14"
 dependencies = [
  "automod",
- "clap_builder 4.5.13",
+ "clap-cargo",
+ "clap_builder 4.5.14",
  "clap_derive",
  "humantime",
  "rustversion",
@@ -424,10 +425,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "clap-cargo"
+version = "0.14.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "23b2ea69cefa96b848b73ad516ad1d59a195cdf9263087d977f648a818c8b43e"
+dependencies = [
+ "anstyle",
+]
+
+[[package]]
 name = "clap_bench"
 version = "0.0.0"
 dependencies = [
- "clap 4.5.13",
+ "clap 4.5.14",
  "divan",
  "lazy_static",
 ]
@@ -447,7 +457,7 @@ dependencies = [
 
 [[package]]
 name = "clap_builder"
-version = "4.5.13"
+version = "4.5.14"
 dependencies = [
  "anstream",
  "anstyle",
@@ -464,10 +474,10 @@ dependencies = [
 
 [[package]]
 name = "clap_complete"
-version = "4.5.12"
+version = "4.5.13"
 dependencies = [
  "automod",
- "clap 4.5.13",
+ "clap 4.5.14",
  "clap_lex 0.7.2",
  "completest",
  "completest-pty",
@@ -483,7 +493,7 @@ dependencies = [
 name = "clap_complete_fig"
 version = "4.5.2"
 dependencies = [
- "clap 4.5.13",
+ "clap 4.5.14",
  "clap_complete",
  "snapbox",
 ]
@@ -492,7 +502,7 @@ dependencies = [
 name = "clap_complete_nushell"
 version = "4.5.3"
 dependencies = [
- "clap 4.5.13",
+ "clap 4.5.14",
  "clap_complete",
  "completest",
  "completest-nu",
@@ -527,7 +537,7 @@ name = "clap_mangen"
 version = "0.2.23"
 dependencies = [
  "automod",
- "clap 4.5.13",
+ "clap 4.5.14",
  "roff",
  "snapbox",
 ]
@@ -1432,7 +1442,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e310b3a6b5907f99202fcdb4960ff45b93735d7c7d96b760fcff8db2dc0e103d"
 dependencies = [
  "cfg-if",
- "windows-targets 0.48.5",
+ "windows-targets 0.52.6",
 ]
 
 [[package]]
